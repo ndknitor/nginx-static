@@ -13,7 +13,6 @@ if [ ! -e "$ssl_folder/$crt_file" ] || [ ! -e "$ssl_folder/$key_file" ]; then
 fi
 
 if [ "$INDEX_WILDCARD_FORWARDING" = "1" ]; then
-    # Add the wildcard forwarding rule to the NGINX configuration block
     sed -i '/location \/ {/a \
         try_files $uri $uri\/ \/index.html;
     ' "$nginx_conf"
