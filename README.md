@@ -26,4 +26,3 @@ docker run -p 80:80 -p 443:443 -v /path/to/ssl/app.key:/ssl/app.key -v /path/to/
 ```
 
 This command runs the Docker container based on the built image, exposes ports 80 and 443 on the host machine, mounts the local SSL key and certificate files into the container, and sets the `WORKER_CONNECTIONS` environment variable to 2048.
-Feel free to adjust the paths and names according to your project structure.
